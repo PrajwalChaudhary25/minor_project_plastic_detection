@@ -1,4 +1,4 @@
 # Ignore Python virtual environment
 myvenv/
-
+.vscode/
 wake_up_screen.py
