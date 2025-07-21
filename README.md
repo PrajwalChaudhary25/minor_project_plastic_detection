@@ -1,11 +1,6 @@
 # 🌟 Plastic Detection and Classification 🌟
-
-This project leverages YOLO and a CNN model to detect and classify different types of plastics from images and live video feeds.
-
 ## 📋 Table of Contents
-
-
-- [Introduction](#Instruction)
+- [Introduction](#introduction)
 - [Installation](#installation)
 - [Running the Project](#running-the-project)
 - [Usage](#usage)
@@ -13,8 +8,27 @@ This project leverages YOLO and a CNN model to detect and classify different typ
   - [Live Video Inference](#live-video-inference)
 - [Contributors](#contributors)
 
-## 🛠️ Installation
+## Introduction
+This project is done in partial fulfillment of Bachelor's degree in computer engineering as a Minor Project. It leverages YOLO and a CNN model to detect and classify different types of plastics from images and live video feeds.
 
+### 1. Web interface
+You can run inference on images or live video feeds through this web interface.
+![Web Interface](screenshots\Interface.png)
+
+### 2. Photo inference
+Drag and drop or browse your image through **Choose File** button and then click **Upload**. 
+![Uploading photo](screenshots\Uploading_photo.png)
+After clicking upload button you will see the output of the inference as shown below.
+![photo inference](screenshots\photo_inference.png)
+
+### 3. Live video inference
+Click on the **Start Video Inference** button on the [Web interface](#1-web-interface) and it will start.
+![Video inference](screenshots\video_inferrence.png)
+
+For more info please read [Project Report PDF](./project_report.pdf)
+
+
+## Installation
 Follow these steps to set up the project on your local machine:
 
 1. **Clone the repository:**
@@ -45,11 +59,39 @@ Follow these steps to set up the project on your local machine:
     pip install -r requirements.txt
     ```
 
-## 🚀 Running the Project
+## Running the Project
 
-1. Ensure you have the necessary model files in the correct directories:
-    - YOLO model weights: `yolo_weights/yolov9s_54epochs_best.pt`
-    - CNN model: `CNN models/modern_CNN.keras`
+```plaintext
+minor-project/
+│
+├── app.py
+├── requirements.txt
+├── README.md
+│
+├── yolo_weights/
+│   └── yolov9s_trained_best.pt
+│   └── Yolov9t_trained_best.pt
+│
+├── CNN models/
+│   └── Best.keras
+│   └── Pabin_classification.keras
+│
+├── uploads/
+│   └── (uploaded images and output.png will be saved here)
+│
+├── templates/
+│   └── index.html
+│   └── inference.html
+│   └── video_inference.html
+│
+├── screenshots/
+│   └── Interface.png
+│   └── Uploading_photo.png
+│   └── photo_inference.png
+│   └── video_inferrence.png
+│
+└── (other files and folders as needed)
+```
 
 2. Start the Flask application:
     ```bash
@@ -58,21 +100,8 @@ Follow these steps to set up the project on your local machine:
 
 3. Open your web browser and go to `http://127.0.0.1:5000/`.
 
-## 📊 Usage
 
-### 📸 Upload Photo for Inference
-
-1. On the homepage, click on **Choose File** to select an image file from your computer.
-2. Click on **Upload** to upload the file and perform inference.
-3. The results will be displayed on a new page with the detected objects and their classifications.
-
-### 📹 Live Video Inference
-
-1. On the homepage, click on **Start Video Inference**.
-2. A new page will open with the live video feed from your webcam.
-3. The detected objects and their classifications will be displayed in real-time.
-
-## 👥 Contributors
+## Contributors
 
 - Jesis Upadhayaya (THA078BCT017)
 - Kamal Shrestha (THA078BCT018)
