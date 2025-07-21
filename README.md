@@ -28,14 +28,14 @@ Click on the **Start Video Inference** button on the [Web interface](#1-web-inte
 
 For more info please read [Project Report PDF](./project_report.pdf)
 
-[Click here for DEMO Video](https://drive.google.com/file/d/1_Za4BeSZkGNh6Ts-ZJZb3wCuXeg2wIen/view?usp=sharing)
+Click here for  [Demo Video](https://drive.google.com/file/d/1_Za4BeSZkGNh6Ts-ZJZb3wCuXeg2wIen/view?usp=sharing)
 
 
 ## Installation
 Follow these steps to set up the project on your local machine:
 
 1. **Clone the repository:**
-    ```bash
+    ```bashv
     git clone https://github.com/yourusername/plastic-detection.git
     cd plastic-detection
     ```
@@ -63,38 +63,39 @@ Follow these steps to set up the project on your local machine:
     ```
 
 ## Running the Project
+1. Make sure the folder looks like this 
 
-```plaintext
-minor-project/
-│
-├── app.py
-├── requirements.txt
-├── README.md
-│
-├── yolo_weights/
-│   └── yolov9s_trained_best.pt
-│   └── Yolov9t_trained_best.pt
-│
-├── CNN models/
-│   └── Best.keras
-│   └── Pabin_classification.keras
-│
-├── uploads/
-│   └── (uploaded images and output.png will be saved here)
-│
-├── templates/
-│   └── index.html
-│   └── inference.html
-│   └── video_inference.html
-│
-├── screenshots/
-│   └── Interface.png
-│   └── Uploading_photo.png
-│   └── photo_inference.png
-│   └── video_inferrence.png
-│
-└── (other files and folders as needed)
-```
+    ```plaintext
+    minor-project/
+    │
+    ├── app.py
+    ├── requirements.txt
+    ├── README.md
+    │
+    ├── yolo_weights/
+    │   └── yolov9s_trained_best.pt
+    │   └── Yolov9t_trained_best.pt
+    │
+    ├── CNN models/
+    │   └── Best.keras
+    │   └── Pabin_classification.keras
+    │
+    ├── uploads/
+    │   └── (uploaded images and output.png will be saved here)
+    │
+    ├── templates/
+    │   └── index.html
+    │   └── inference.html
+    │   └── video_inference.html
+    │
+    ├── screenshots/
+    │   └── Interface.png
+    │   └── Uploading_photo.png
+    │   └── photo_inference.png
+    │   └── video_inferrence.png
+    │
+    └── (other files and folders as needed)
+    ```
 
 2. Start the Flask application:
     ```bash
