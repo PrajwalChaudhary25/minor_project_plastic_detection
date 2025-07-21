@@ -16,8 +16,8 @@ app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['ALLOWED_EXTENSIONS'] = {'png', 'jpg', 'jpeg'}
 
 # Load models
-yolo_model = YOLO("yolo_weights\Yoloppps.pt")
-cnn_model = tf.keras.models.load_model("CNN models/Pabin_Model.keras")
+yolo_model = YOLO("yolo_weights\yolov9t_trained_best.pt")
+cnn_model = tf.keras.models.load_model("CNN models/Best.keras")
 # class_labels = {0: 'HDPE', 1: 'Other', 2: 'PET', 3: 'PP', 4: 'PS'}
 class_labels = {0: 'HDPE', 1: 'PET', 2: 'PP', 3: 'PS'}
 
