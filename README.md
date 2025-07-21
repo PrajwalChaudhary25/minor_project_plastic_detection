@@ -13,17 +13,17 @@ This project is done in partial fulfillment of Bachelor's degree in computer eng
 
 ### 1. Web interface
 You can run inference on images or live video feeds through this web interface.
-![Web Interface](screenshots\Interface.png)
+![Web Interface](screenshots/Interface.png)
 
 ### 2. Photo inference
 Drag and drop or browse your image through **Choose File** button and then click **Upload**. 
-![Uploading photo](screenshots\Uploading_photo.png)
+![Uploading photo](screenshots/Uploading_photo.png)
 After clicking upload button you will see the output of the inference as shown below.
-![photo inference](screenshots\photo_inference.png)
+![photo inference](screenshots/photo_inference.png)
 
 ### 3. Live video inference
 Click on the **Start Video Inference** button on the [Web interface](#1-web-interface) and it will start.
-![Video inference](screenshots\video_inferrence.png)
+![Video inference](screenshots/video_inferrence.png)
 
 For more info please read [Project Report PDF](./project_report.pdf)
 
