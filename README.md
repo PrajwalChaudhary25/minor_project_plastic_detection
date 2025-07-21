@@ -3,9 +3,6 @@
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Running the Project](#running-the-project)
-- [Usage](#usage)
-  - [Upload Photo for Inference](#upload-photo-for-inference)
-  - [Live Video Inference](#live-video-inference)
 - [Contributors](#contributors)
 
 ## Introduction
