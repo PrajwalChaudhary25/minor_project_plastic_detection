@@ -60,7 +60,7 @@ Follow these steps to set up the project on your local machine:
     ```
 
 ## Running the Project
-1. Make sure the folder looks like this 
+1. Make sure the **folder structure** looks like this 
 
     ```plaintext
     minor-project/
