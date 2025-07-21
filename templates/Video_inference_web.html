@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plastic Detection Inference</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        video { border: 2px solid black; width: 640px; height: 480px; margin-top: 20px; }
+        #fps, #detections { font-size: 20px; font-weight: bold; margin-top: 10px; }
+        #fps { color: green; }
+    </style>
+</head>
+<body onload="startWebcam()">
+    <h1>Plastic Detection Inference</h1>
+    <video id="video" autoplay></video>
+    <div id="fps">FPS: --</div>
+    <div id="detections">Detected Objects: None</div>
+
+    <script>
+        let video = null;
+        let lastTime = performance.now();
+        
+        function startWebcam() {
+            video = document.getElementById("video");
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then(stream => video.srcObject = stream)
+                .catch(err => console.error("Error accessing webcam:", err));
+
+            setInterval(captureFrame, 35); // Capture frame every 100ms (~10 FPS)
+        }
+
+        function captureFrame() {
+            if (!video.videoWidth || !video.videoHeight) return;
+
+            let canvas = document.createElement("canvas");
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            let context = canvas.getContext("2d");
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+            let frame = canvas.toDataURL("image/jpeg");  // Convert frame to Base64
+
+            let now = performance.now();
+            let fps = (1000 / (now - lastTime)).toFixed(2);
+            lastTime = now;
+
+            fetch("/process_frame", {
+                method: "POST",
+                body: JSON.stringify({ image: frame }),
+                headers: { "Content-Type": "application/json" }
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("fps").innerText = `FPS: ${fps}`;
+                
+                if (data.objects.length > 0) {
+                    let detections = data.objects.map(obj => 
+                        `${obj.label} (${obj.x_min},${obj.y_min})`
+                    ).join(", ");
+                    document.getElementById("detections").innerText = `Detected: ${detections}`;
+                } else {
+                    document.getElementById("detections").innerText = "No Plastic Detected";
+                }
+            })
+            .catch(error => console.error("Error:", error));
+        }
+    </script>
+</body>
+</html>
