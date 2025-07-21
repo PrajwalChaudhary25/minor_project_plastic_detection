@@ -25,7 +25,7 @@ After clicking upload button you will see the output of the inference as shown b
 Click on the **Start Video Inference** button on the [Web interface](#1-web-interface) and it will start.
 ![Video inference](screenshots\video_inferrence.png)
 
-For more info please read [Project Report PDF](./Project_report.pdf)
+For more info please read [Project Report PDF](./project_report.pdf)
 
 
 ## Installation
