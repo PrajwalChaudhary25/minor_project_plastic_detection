@@ -4,6 +4,7 @@
 - [Installation](#installation)
 - [Running the Project](#running-the-project)
 - [Contributors](#contributors)
+- [Contact](#contact)
 
 ## Introduction
 This project is done in partial fulfillment of Bachelor's degree in computer engineering as a Minor Project. It leverages YOLO and a CNN model to detect and classify different types of plastics from images and live video feeds.
@@ -110,9 +111,9 @@ Follow these steps to set up the project on your local machine:
 - Prajwal Chaudhary (THA078BCT028)
 
 ---
-
 Feel free to reach out to us if you have any questions or suggestions! 😊
-## 📧 Contact
+
+## Contact
 
 For any questions or suggestions, feel free to reach out to us at:
 
